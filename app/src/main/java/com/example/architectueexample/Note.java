@@ -22,7 +22,7 @@ public class Note {
         this.priority = priority;
     }
 
-    public Note(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
