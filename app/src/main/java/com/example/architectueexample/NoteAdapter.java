@@ -35,7 +35,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteHolder> {
     public int getItemCount() {
         return notes.size();
     }
-    private void setNotes(List<Note> notes ){
+    void setNotes(List<Note> notes){
         this.notes = notes;
         notifyDataSetChanged();
     }
