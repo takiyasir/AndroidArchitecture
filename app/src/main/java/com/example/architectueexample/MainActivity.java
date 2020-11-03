@@ -39,8 +39,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 
-        NoteAdapter adapter = new NoteAdapter();
+        final NoteAdapter adapter = new NoteAdapter();
         recyclerView.setAdapter(adapter);
+
+
 
         noteViewModel = ViewModelProviders.of(this).get(NoteViewModel.class);
         noteViewModel.getAllNotes().observe(this,new Observer<List<Note>>(){
@@ -65,8 +67,9 @@ public class MainActivity extends AppCompatActivity {
             noteViewModel.insert(note );
 
             Toast.makeText(this, "Note saved", Toast.LENGTH_SHORT).show();
-        } else {
+        }
+        else {
             Toast.makeText(this,"Note note saved",Toast.LENGTH_SHORT).show();
         }
-        }
     }
+}
